@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Linear+B&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans Linear B', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+:root{
+    --primary: #894ad6;
+}
+
+*{
+    padding: 0px; 
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    background-color: #111111;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    background-color: #111111;
+    color: #dddddd;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+h1{
+    font-size: 128px;
+    font-weight: 700;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 22px;
+    color: #b1b1b1;
+    text-align: center;
+}
+
+
+
+.loadpage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 600;
+    transition: 0.2s ease;
+    opacity: 1;
+}
+.loadpage .loadicon{
+    height: 50px;
+    width: 50px;
+    box-shadow: 0px 0px 8px 2px #894ad6ab;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    animation: --loadd 2s ease infinite;
+}
+@keyframes --loadd{
+    0%{
+        height: 50px;
+        width: 50px;
+    }
+    50%{
+        height: 65px;
+        width: 65px;
+    }
+    100%{
+        height: 50px;
+        width: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    padding: 0px 30px ;
+    z-index: 15;
+}
+.nav-bar p{
+    font-size: 21px;
+    font-weight: 500;
+    color: #b1b1b1;
+    transition: 0.5s ease;
+}
+.nav-bar .language{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    border: 3px solid var(--primary);
+    border-radius: 22.5px;
+    width: 160px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px #894ad697;
+    transition: 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+.nav-bar .language:hover{
+    box-shadow: 0px 0px 13px 2px #894ad697;
+}
+.nav-bar .language .swicher{
+    width: 80px;
+    height: 100%;
+    border-radius: 22.5px;
+    background-color: var(--primary);
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 5px var(--primary);
+}
+#tc{
+    color: white;
+}
+.nav-bar .language .option{
+    width: 80px;
+    height: 100%;
+    border-radius: 22.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-continer{
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.main-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    gap: 60px;
+    position: sticky;
+    top: 0px;
+}
+.main-section .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.main-section .title span{
+    color: var(--primary);
+}
+button{
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    background-color: var(--primary);
+    height: 50px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 0px 17px 5px #894ad6ad;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s ease;
+}
+button:hover{
+    box-shadow: 0px 0px 25px 8px #894ad6ad;
+}
+.projects{
+    width: 80vw;
+    position: absolute;
+    top: 90vh;
+    background-color: #111111;
+    border-radius: 20px 20px 0px 0px;
+    min-height: 110vh;
+    box-shadow: 0px 0px 35px 15px #894ad6ad;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    padding-top: calc(10vh + 50px);
+    z-index: 40;
+    gap: 55px;
+}
+.projects h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.projects .project{
+    width: 60vw;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #894ad69d;
+    border-radius: 20px;
+    padding: 30px;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px 3px #894ad683;
+    justify-content: center;
+    gap: 20px;
+}
+.appear{
+    opacity: 0;
+    transition: 0.5s ease;
+}
+.projects .project p{
+    color: #b1b1b1c0;
+    transition: 0.3s ease;
+    text-align: center;
+}
+.projects .project:hover p{
+    color: #bdbdbd;
+}
+.projects .project h3{
+    transition: 0.3s ease;
+}
+.projects .project:hover h3{
+    color: rgba(255, 255, 255, 0.903);
+}
+.projects .project:hover{
+    box-shadow: 0px 0px 12px 3px #894ad693;
+}
+.next{
+    margin-top: 70px;
+}
+.broken{
+    margin-top: -40px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    justify-content: center;
+    gap: 40px;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    margin-top: 75px;
+    position: relative;
+}
+.footer p{
+    font-size: 16px;
+    font-family: 'Noto Sans Linear B', sans-serif;
+    color: rgba(255, 255, 255, 0.354);
+    z-index: 3;
+    margin-bottom: -5px;
+}
+.footer #names{
+    font-size: 18px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.502);
+}
+.report-page{
+    width: 100vw;
+    height: 0vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #111111;
+    z-index: 50;
+    opacity: 0;
+    border-radius: 20px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.report-page .questions{
+    width: 0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+    opacity: 0;
+    transition: 0.8s ease;
+}
+
+.report-page .questions button{
+    width: 55%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: var(--primary);
+    opacity: 1;
+}
+
+.report-page .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+    transition: 2s ease;
+    padding-bottom: 20vh;
+}
+.report-page .right iframe{
+    position: absolute;
+    width: 70vw;
+    height: 150vh;
+}
+.report-page .right h3{
+    margin-top: 60vh;
+    color: #d5bef0;
+    transition: 0.8s ease;
+    opacity: 0;
+    z-index: 3;
+}
+/* Got to change this for a batter style maching the font weight and the colors of the form page
+the rest funccions ok an djus need to add a change on the text eith an opacity change in between.*/
+.voiceTextAccept{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #894ad6;
+    box-shadow: 0px 0px 10px 4px #894ad6ad;
+    opacity: 0.8;
+    transition: 0.2s ease;
+    background-color: #894ad6;
+}
+.voiceTextAccept:hover{
+    opacity: 90%;
+    box-shadow: 0px 0px 16px 8px #894ad6ad;
+}
+
+
+.formviewer{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #111111;
+    display: none;
+    flex-direction: column;
+    z-index: 60;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+
