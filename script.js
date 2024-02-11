@@ -76,7 +76,7 @@ const titl3 = document.querySelector('#titl3');
 const titl4 = document.querySelector('#titl4');
 function translateSpan(who){
     if (who == 'es'){
-        title.innerHTML='Consejo escolar';
+        title.innerHTML='Concejo escolar';
         subtitle.innerHTML="Recogida de propuestas y temas del instituto a denunciar de cara a los <span>estudiantes</span>";
         mainBtn.innerHTML='Informanos';
         pro1t.innerHTML='En las horas de guardia, debemos quedarnos en clase sentados y sin poder socializar con los compañeros. La propuesta consiste en romper esto y fomentar el deporte mejorando la condición física y la salud del alumnado, permitiendo que estos puedan salir al patio y disponer de material de educación física.';
